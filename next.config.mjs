@@ -1,4 +1,9 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {};
+const nextConfig = {
+    // Disable Turbopack for production builds (fixes PostCSS/autoprefixer issues)
+    experimental: {
+        turbo: false,
+    },
+};
 
 export default nextConfig;
