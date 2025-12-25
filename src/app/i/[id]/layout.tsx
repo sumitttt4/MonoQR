@@ -7,7 +7,7 @@ interface Props {
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
     const { data } = supabase.storage
-        .from('uploads')
+        .from('Photo Upload')
         .getPublicUrl(params.id);
 
     return {

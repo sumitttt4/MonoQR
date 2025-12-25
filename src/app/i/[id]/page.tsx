@@ -18,7 +18,7 @@ export default function ImageViewerPage() {
         if (imageId) {
             // Get public URL from Supabase Storage
             const { data } = supabase.storage
-                .from('uploads')
+                .from('Photo Upload')
                 .getPublicUrl(imageId);
 
             if (data?.publicUrl) {

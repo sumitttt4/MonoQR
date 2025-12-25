@@ -435,7 +435,7 @@ END:VEVENT`;
         try {
             // Upload to Supabase Storage
             const { data, error } = await supabase.storage
-                .from('uploads')
+                .from('Photo Upload')
                 .upload(fileName, file, {
                     cacheControl: '3600',
                     upsert: false
