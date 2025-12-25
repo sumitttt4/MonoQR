@@ -370,7 +370,7 @@ END:VEVENT`;
             import("jspdf").then((jsPDFModule) => {
                 const jsPDF = jsPDFModule.default;
                 const doc = new jsPDF();
-                const url = URL.createObjectURL(blob);
+                const url = URL.createObjectURL(blob as any);
                 const img = new Image();
                 img.src = url;
 
